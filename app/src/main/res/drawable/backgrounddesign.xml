@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--<stroke android:width="2dp" android:color="#499F68"/>-->
+    <!--<corners android:radius="5dp"/>-->
+    <!--&lt;!&ndash;<solid android:color="#17847F"/>&ndash;&gt;-->
+    <!--<solid android:color="#499F68"/>-->
+
+    <!--Blue-->
+    <stroke android:width="2dp" android:color="#02bcff"/>
+    <corners android:radius="60dp"/>
+    <!--<solid android:color="#17847F"/>-->
+    <solid android:color="#02bcff"/>
+
+    <!--Orange-->
+    <!--<stroke android:width="2dp" android:color="#ff8e04"/>-->
+    <!--<corners android:radius="60dp"/>-->
+    <!--&lt;!&ndash;<solid android:color="#17847F"/>&ndash;&gt;-->
+    <!--<solid android:color="#ff8e04"/>-->
+</shape>

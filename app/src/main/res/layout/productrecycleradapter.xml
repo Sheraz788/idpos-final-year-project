@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="50dp"
+                                             android:id="@+id/productConstraintLayout"
+                                             tools:layout_editor_absoluteY="25dp" android:background="#fff"
+                                             android:layout_marginStart="20dp" android:layout_marginEnd="20dp"
+>
+
+    <TextView
+            android:text="Product"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/storeProductValue" android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/product_CheckBox" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="28dp"
+            android:layout_marginEnd="89dp"
+            app:layout_constraintBottom_toBottomOf="@+id/product_CheckBox" android:layout_marginTop="8dp"/>
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/product_CheckBox"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toEndOf="@+id/storeProductValue"
+            android:layout_marginEnd="28dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="8dp"/>
+</android.support.constraint.ConstraintLayout>

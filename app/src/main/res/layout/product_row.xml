@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:id="@+id/productRow"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="wrap_content"
+                                             android:layout_marginLeft="10dp"
+                                             android:layout_marginTop="20dp"
+                                             android:layout_marginRight="10dp"
+                                             android:background="@android:color/white"
+                                             android:orientation="vertical">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/StoreProductDescriptionLayout"
+            app:layout_constraintStart_toEndOf="@+id/storeProductImage"
+            app:layout_constraintEnd_toStartOf="@+id/storeProductPriceLayout"
+            app:layout_constraintTop_toTopOf="@+id/storeProductPriceLayout"
+            app:layout_constraintBottom_toBottomOf="@+id/storeProductPriceLayout" android:layout_marginEnd="19dp"
+            android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
+        <TextView
+                android:id="@+id/storeProductName_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                tools:layout_editor_absoluteX="100dp" tools:layout_editor_absoluteY="23dp" android:text="Product Name"/>
+        <TextView
+                android:id="@+id/storeProductName_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="lifeBoy"
+                tools:layout_editor_absoluteY="55dp" tools:layout_editor_absoluteX="122dp"
+                android:layout_marginTop="20dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/storeProductPriceLayout"
+            app:layout_constraintStart_toEndOf="@+id/StoreProductDescriptionLayout"
+            app:layout_constraintEnd_toStartOf="@+id/StoreProductStatus"
+            app:layout_constraintTop_toTopOf="@+id/StoreProductStatus"
+            app:layout_constraintBottom_toBottomOf="@+id/StoreProductStatus" android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp" android:layout_marginTop="8dp">
+        <TextView
+                android:id="@+id/storeProductPrice_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                tools:layout_editor_absoluteY="23dp" tools:layout_editor_absoluteX="211dp"/>
+        <TextView
+                android:id="@+id/storeProductPrice_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="250"
+                tools:layout_editor_absoluteY="55dp" tools:layout_editor_absoluteX="211dp"
+                android:layout_marginTop="20dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/StoreProductStatus"
+            app:layout_constraintStart_toEndOf="@+id/storeProductPriceLayout" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="35dp" android:layout_marginBottom="8dp">
+        <TextView
+                android:id="@+id/storeProductStatus_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                tools:layout_editor_absoluteY="23dp" tools:layout_editor_absoluteX="270dp"/>
+        <TextView
+                android:id="@+id/storeProductStatus_value"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                tools:layout_editor_absoluteY="55dp" tools:layout_editor_absoluteX="270dp"
+                android:layout_marginTop="20dp" android:background="@drawable/statusavailabledesign"
+                android:layout_gravity="center"/>
+    </LinearLayout>
+    <ImageView
+            android:id="@+id/storeProductImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@mipmap/ic_product"
+            app:layout_constraintEnd_toStartOf="@+id/StoreProductDescriptionLayout"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="13dp"
+            app:layout_constraintDimensionRatio="1:1" android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+    />
+
+</android.support.constraint.ConstraintLayout>

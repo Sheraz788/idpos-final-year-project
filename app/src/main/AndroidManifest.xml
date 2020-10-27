@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.sherazali.idpos_app">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+
+    <uses-feature
+            android:name="android.hardware.telephony"
+            android:required="true"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/pos"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/pos"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+        <activity android:name=".Users.LoginActivity">
+        </activity>
+        <activity
+                android:name=".Home.SplashScreen"
+                android:noHistory="true">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name=".Home.HomeActivity"
+                android:label="@string/title_activity_home"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity
+                android:name=".Users.CreateAccount"
+                android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".Home.ReportsActivity">
+        </activity>
+        <activity android:name=".Home.SettingActivity">
+        </activity>
+        <activity android:name=".Retailer.CreateRetailer">
+        </activity>
+        <activity android:name=".Customer.CreateCustomer">
+        </activity>
+        <activity
+                android:name=".Retailer.RetailsActivity"
+                android:label="Retails"
+                android:launchMode="singleTop">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".Home.HomeActivity"/>
+        </activity>
+        <activity android:name=".Retailer.StoresActivity">
+        </activity>
+        <activity android:name=".Retailer.ProductsActivity">
+        </activity>
+        <activity android:name=".Customer.CartActivity">
+        </activity>
+        <activity android:name=".Customer.CheckoutActivity">
+        </activity>
+        <activity
+                android:name=".Customer.CustomerStoreHomeActivity"
+                android:label="@string/title_activity_customer_store_home"
+                android:theme="@style/AppTheme">
+        </activity>
+        <activity android:name=".Retailer.CreateStore">
+        </activity>
+        <activity
+                android:name=".Retailer.TransactionActivity"
+                android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".Retailer.InventoryActivity">
+        </activity>
+        <activity
+                android:name=".Salesman.CreateSaleman"
+                android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity android:name=".Retailer.NotificationsActivity">
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Retailer.StoresActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/stores_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:background="#1395ff"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+    >
+
+        <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/back_icon"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:scaleType="fitStart"/>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Stores"
+                android:textSize="25sp"
+                android:layout_gravity="left"
+                android:id="@+id/stores_title" tools:layout_editor_absoluteY="12dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:textColor="@android:color/background_light" android:textAlignment="center"
+                android:paddingStart="4dp" android:textStyle="bold"/>
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:id="@+id/retails_title_txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="65dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="Retailers List"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/retailers_mainspinner"
+                    app:layout_constraintStart_toStartOf="@+id/retailers_mainspinner"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            <Spinner
+                    android:id="@+id/retailers_mainspinner"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginBottom="14dp"
+                    app:layout_constraintBottom_toTopOf="@+id/Store_title_txtView"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/retails_title_txtView"/>
+
+            <TextView
+                    android:id="@+id/Store_title_txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:text="Stores List"
+                    android:textColor="#000"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toTopOf="@+id/stores_mainspinner"
+                    app:layout_constraintStart_toStartOf="@+id/retailers_mainspinner"
+                    app:layout_constraintTop_toBottomOf="@+id/retailers_mainspinner"/>
+
+            <Spinner
+                    android:id="@+id/stores_mainspinner"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginRight="28dp"
+                    android:layout_marginBottom="17dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addStore_Btn"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/Store_title_txtView"/>
+
+            <Button
+                    android:id="@+id/addStore_Btn"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
+                    android:layout_marginBottom="21dp"
+                    android:background="@drawable/buttonsdesign"
+                    android:text="Add Store"
+                    android:textColor="#fff"
+                    app:layout_constraintBottom_toTopOf="@+id/retailerDetailConstraintLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/stores_mainspinner"/>
+
+            <RelativeLayout
+                    android:id="@+id/retailerDetailConstraintLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addStore_Btn" android:layout_marginBottom="24dp">
+
+                <TextView
+                        android:id="@+id/storeName_txtViewStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/store_DetailTitle_txtView"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Store Name: "
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/storeName_txtValueStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/storeName_txtViewStores"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="20dp"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/ownerName_txtViewStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/storeName_txtViewStores"
+                        android:layout_alignStart="@+id/storeName_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Retailer Name: "
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/ownerName_txtValueStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/storeName_txtValueStores"
+                        android:layout_alignTop="@+id/ownerName_txtViewStores"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/telephone_txtViewStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ownerName_txtViewStores"
+                        android:layout_alignStart="@+id/storeName_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Telephone:"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/telephone_txtValueStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/storeName_txtValueStores"
+                        android:layout_alignTop="@+id/telephone_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/mobile_txtViewStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/telephone_txtViewStores"
+                        android:layout_alignStart="@+id/storeName_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Mobile:"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/mobile_txtValueStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/storeName_txtValueStores"
+                        android:layout_alignTop="@+id/mobile_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/address_txtViewStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mobile_txtViewStores"
+                        android:layout_alignStart="@+id/mobile_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="25dp"
+                        android:text="Address:"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/address_txtValueStores"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/storeName_txtValueStores"
+                        android:layout_alignTop="@+id/address_txtViewStores"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:textSize="18sp"/>
+
+                <TextView
+                        android:id="@+id/store_DetailTitle_txtView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginTop="14dp"
+                        android:text="Store Detail"
+                        android:textColor="#000"
+                        android:textSize="24sp"/>
+            </RelativeLayout>
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

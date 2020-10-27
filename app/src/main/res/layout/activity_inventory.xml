@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Retailer.InventoryActivity">
+
+    <android.support.v7.widget.Toolbar
+            android:id="@+id/inventory_toolbar"
+            android:layout_width="0dp"
+            android:layout_height="70dp"
+            android:background="#1395ff"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_marginBottom="8dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/InventoryScrollView" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+                android:id="@+id/back_arrow"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/back_icon"
+                tools:layout_editor_absoluteY="0dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:scaleType="fitCenter"/>
+
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inventory"
+                android:textSize="25sp"
+                android:layout_gravity="left"
+                android:id="@+id/transaction_title" tools:layout_editor_absoluteY="12dp"
+                tools:layout_editor_absoluteX="16dp"
+                android:textColor="@android:color/background_light" android:textAlignment="center"
+                android:paddingStart="8dp" android:textStyle="bold"/>
+
+
+    </android.support.v7.widget.Toolbar>
+    <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/InventoryScrollView"
+            app:layout_constraintTop_toBottomOf="@+id/inventory_toolbar"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" app:layout_constraintTop_toTopOf="@+id/availableInventory_txt"
+                app:layout_constraintBottom_toTopOf="@+id/availableInventory_txt">
+
+
+            <TextView
+                    android:text="Select Retailer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectRetailerInventory_txt" android:textSize="20sp"
+                    android:layout_marginTop="16dp" android:layout_marginBottom="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/selectRetailerInventory_spinner"
+                    app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+            <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" android:id="@+id/selectRetailerInventory_spinner"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/selectRetailerInventory_txt"
+                    android:layout_marginBottom="14dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/selectStoreInventory_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+            <TextView
+                    android:text="Select Store"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/selectStoreInventory_txt" android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/selectRetailerInventory_spinner"
+                    android:layout_marginBottom="11dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/selectStoreInventory_spinner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+            <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="40dp" android:id="@+id/selectStoreInventory_spinner"
+                    android:scrollbars="vertical"
+                    app:layout_constraintTop_toBottomOf="@+id/selectStoreInventory_txt"
+                    android:layout_marginBottom="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/inventoryCategoriesList_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+            <TextView
+                    android:text="Product Categories"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inventoryCategoriesList_txt" android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/selectStoreInventory_spinner"
+                    android:layout_marginBottom="16dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/inventoryProductCategories_spinner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+
+            <Spinner
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/inventoryProductCategories_spinner"
+                    app:layout_constraintTop_toBottomOf="@+id/inventoryCategoriesList_txt"
+                    android:layout_marginBottom="23dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/availableInventory_txt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+
+            <TextView
+                    android:text="Available Inventory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/availableInventory_txt" android:textSize="20sp"
+                    app:layout_constraintTop_toBottomOf="@+id/inventoryProductCategories_spinner"
+                    android:layout_marginBottom="17dp" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/inventory_recyclerView"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="28dp" android:layout_marginEnd="28dp"
+            />
+
+            <android.support.v7.widget.RecyclerView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inventory_recyclerView"
+
+                    app:layout_constraintTop_toBottomOf="@+id/availableInventory_txt"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:background="#1395ff" android:paddingBottom="4dp">
+            </android.support.v7.widget.RecyclerView>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical"
+              android:layout_width="300dp"
+              android:layout_height="250dp" android:gravity="center"
+              android:background="@drawable/popupbackgrounddesign">
+
+    <TextView
+            android:text="Product Detail?"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content" android:id="@+id/textView4" android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp" android:textSize="18sp"/>
+    <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|number"
+            android:ems="10"
+            android:id="@+id/productQuantity_value" android:hint="Total Quantity" android:layout_marginTop="0dp"
+            android:layout_marginBottom="20dp"/>
+    <EditText
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName|number"
+            android:ems="10"
+            android:id="@+id/productPrice_value" android:hint="Price"/>
+    <Button
+            android:text="Confirm"
+            android:layout_width="100dp"
+            android:layout_height="50dp" android:id="@+id/confirm_productBtn" android:layout_gravity="end"
+            android:layout_marginRight="10dp" android:layout_marginTop="10dp"/>
+</LinearLayout>

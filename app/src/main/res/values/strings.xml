@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">idPOS</string>
+    <string name="idpos">Point Of Sale</string>
+    <string name="forgot_password_txt">
+        <u>Forgot Password</u>
+    </string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="create_account_txt">Sign Up</string>
+    <string name="sign_in_btn_txt">Sign In</string>
+
+    <string name="email_hint_txt">Email</string>
+    <string name="password_hint_txt">Password</string>
+    <string name="username_hint_txt">Username</string>
+    <string name="confrim_password_hint_txt">Confrim Password</string>
+    <string name="store_name_hint_txt">Store Name</string>
+    <string name="create_store_btn_txt">Create Store</string>
+    <string name="title_activity_master_data">MasterDataActivity</string>
+
+
+    <string-array name="retailer_spinner">
+        <item>Select a Retailer</item>
+
+    </string-array>
+    <string-array name="store_spinner">
+        <item>Select a Store!</item>
+
+    </string-array>
+
+    <string name="title_activity_customer_store_home">Store</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="action_settings">Settings</string>
+
+
+</resources>
